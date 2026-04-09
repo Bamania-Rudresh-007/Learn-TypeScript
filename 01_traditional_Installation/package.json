@@ -1,0 +1,16 @@
+{
+  "name": "typescript--chai-aur-code",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Bamania RUdresh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc",
+    "run": "node dist/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
