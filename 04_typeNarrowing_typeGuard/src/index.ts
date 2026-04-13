@@ -21,13 +21,15 @@ type deleteR = {
 }
 
 function makeRequest(req: get | post | deleteR){
-    if(req.type === "get"){
-        return `Its get request`;
-    }
-    if(req.type === "post"){
-        return `Its post request`;
-    }
-    if(req.type === "delete"){
-        return `Its deleee request`;
+    switch (req.type) {
+        case "get":
+            console.log("Its a get request");
+            break;
+        case "post":
+            console.log("Its a post request");
+            break;
+        case "delete":
+            console.log("Its a delete request"); 
+            break;
     }
 }
