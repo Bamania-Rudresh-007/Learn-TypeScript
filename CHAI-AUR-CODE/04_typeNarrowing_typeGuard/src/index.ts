@@ -20,7 +20,9 @@ type deleteR = {
     type: "delete"
 }
 
-function makeRequest(req: get | post | deleteR){
+type request = get | post | deleteR;
+
+function makeRequest(req: request){
     switch (req.type) {
         case "get":
             console.log("Its a get request");
