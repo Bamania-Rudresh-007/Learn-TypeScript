@@ -35,3 +35,25 @@ function makeRequest(req: request){
             break;
     }
 }
+
+type  Admin = {
+    name: string,
+    role: string
+}
+type User = {
+    name: string,
+    occupation: string
+} 
+
+function isAdmin(account: Admin | User): account is Admin{
+    return "role" in account;
+}
+
+function getAccountType(account: Admin | User){
+    if(isAdmin(account)){
+        console.log(`Admin with role: ${account.role}`);
+    }
+    else{
+        console.log(`User with occupation: ${account.occupation}`);
+    }
+}
